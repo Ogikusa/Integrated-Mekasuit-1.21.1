@@ -1,6 +1,7 @@
-package com.ogikusa.mekanismintegrated.mekmodule;
+package com.ogikusa.mekabridge.mekmodule;
 
-import com.ogikusa.mekanismintegrated.compat.MekanismModuleHolders;
+import com.ogikusa.mekabridge.Config;
+import com.ogikusa.mekabridge.compat.MekanismModuleHolders;
 import com.simibubi.create.AllDataComponents;
 import com.simibubi.create.content.equipment.armor.BacktankUtil;
 import mekanism.api.gear.ICustomModule;
@@ -14,13 +15,8 @@ import net.minecraft.world.item.ItemStack;
 import net.neoforged.neoforge.common.NeoForgeMod;
 import org.jetbrains.annotations.NotNull;
 
-
-// Create の空気が満タンでない場合はの場合は ENERGY_PER_AIR 分を消費して空気を補充します。ただし水中にいる場合は電解呼吸ユニットを付けていないと空気を補充することができません。
 public final class PressurizedAirModule
         implements ICustomModule<PressurizedAirModule> {
-
-    // 1空気を補充するのに使う空気
-    private static final long ENERGY_PER_AIR = 1_0000L;
 
     @Override
     public void tickServer(
@@ -46,11 +42,12 @@ public final class PressurizedAirModule
             return;
         }
 
+        long energyPerAir = Config.PRESSURIZED_AIR_MODULE_ENERGY_PER_AIR.get();
         // 電力を消費して内部的な Create の空気を満たします
         long energyUsed =
-                module.useEnergy(player, stack, ENERGY_PER_AIR);
+                module.useEnergy(player, stack, energyPerAir);
 
-        if (energyUsed == ENERGY_PER_AIR) {
+        if (energyUsed == energyPerAir) {
             stack.set(
                     AllDataComponents.BACKTANK_AIR,
                     Math.min(currentAir + 1, maximumAir)

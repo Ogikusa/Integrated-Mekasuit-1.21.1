@@ -1,0 +1,5 @@
+{
+  "itemGroup.mekabridge": "Ogikusa Mekanism Integrated Mod",
+  "module.mekabridge.pressurized_air_module": "圧縮空気ユニット",
+  "description.mekabridge.pressurized_air_module": "Create の圧縮空気を MekaSuit 内蔵のタンクに貯蔵します。\n電力を消費して圧縮空気を随時作り出せますが、水中にいる場合は 電解呼吸ユニットがない限り圧縮空気を作り出すことはできません"
+}

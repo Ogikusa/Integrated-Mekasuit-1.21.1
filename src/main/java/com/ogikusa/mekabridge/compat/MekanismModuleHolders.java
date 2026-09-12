@@ -1,4 +1,4 @@
-package com.ogikusa.mekanismintegrated.compat;
+package com.ogikusa.mekabridge.compat;
 
 import mekanism.api.MekanismAPI;
 import mekanism.api.gear.ModuleData;

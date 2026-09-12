@@ -1,6 +1,6 @@
-package com.ogikusa.mekanismintegrated.registry;
+package com.ogikusa.mekabridge.registry;
 
-import com.ogikusa.mekanismintegrated.mekmodule.PressurizedAirModule;
+import com.ogikusa.mekabridge.mekmodule.PressurizedAirModule;
 import mekanism.api.MekanismAPI;
 import mekanism.api.MekanismIMC;
 import mekanism.api.gear.ModuleData;
@@ -13,14 +13,14 @@ public class ModMekModules {
     public static final DeferredRegister<ModuleData<?>> MODULES =
             DeferredRegister.create(
                     MekanismAPI.MODULE_REGISTRY_NAME,
-                    "ogikusa_mekanism_integrated"
+                    "mekabridge"
             );
 
     public static final DeferredHolder<
-                ModuleData<?>,
-                ModuleData<PressurizedAirModule>
-                > CREATE_PRESSURIZED_AIR_INTEGRATION = MODULES.register(
-            "create_pressurized_air_integration",
+            ModuleData<?>,
+            ModuleData<PressurizedAirModule>
+            > CREATE_PRESSURIZED_AIR_INTEGRATION = MODULES.register(
+            "pressurized_air_module",
             () -> new ModuleData<>(ModuleData.ModuleDataBuilder.customInstanced(PressurizedAirModule::new, ModItems.PRESSURIZED_AIR_MODULE_ITEM))
     );
 
@@ -32,5 +32,6 @@ public class ModMekModules {
         return CREATE_PRESSURIZED_AIR_INTEGRATION;
     }
 
-    private ModMekModules() {}
+    private ModMekModules() {
+    }
 }

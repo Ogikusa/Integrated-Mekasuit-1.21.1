@@ -1,0 +1,5 @@
+{
+  "itemGroup.mekabridge.main": "Ogikusa's Mekanism Integration",
+  "module.mekabridge.pressurized_air_module": "Pressurized Air Integration Unit",
+  "description.mekabridge.pressurized_air_module": "Store Create compressed air in the MekaSuit's internal tank.\nYou can consume power to produce compressed air at any time, but while underwater, you cannot produce compressed air unless you have an Electrolytic Breathing Unit."
+}

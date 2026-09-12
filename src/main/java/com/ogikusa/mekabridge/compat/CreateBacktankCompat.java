@@ -1,6 +1,6 @@
-package com.ogikusa.mekanismintegrated.compat;
+package com.ogikusa.mekabridge.compat;
 
-import com.ogikusa.mekanismintegrated.registry.ModMekModules;
+import com.ogikusa.mekabridge.registry.ModMekModules;
 import com.simibubi.create.content.equipment.armor.BacktankUtil;
 import mekanism.api.gear.IModuleHelper;
 import net.minecraft.world.entity.EquipmentSlot;

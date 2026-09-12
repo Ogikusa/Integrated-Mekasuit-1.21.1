@@ -1,4 +1,4 @@
-package com.ogikusa.mekanismintegrated;
+package com.ogikusa.mekabridge;
 
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
